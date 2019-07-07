@@ -12,8 +12,8 @@
 # See the License for the specific language governing permissions and
 # limitations under the License.
 
-# Inherit some common CM stuff.
-$(call inherit-product, vendor/aosp/config/common_full_phone.mk)
+# Inherit some common Lineage stuff.
+$(call inherit-product, vendor/cm/config/common_full_phone.mk)
 
 # Inherit from those products. Most specific first.
 $(call inherit-product, $(SRC_TARGET_DIR)/product/full_base_telephony.mk)
@@ -22,15 +22,10 @@ $(call inherit-product, $(SRC_TARGET_DIR)/product/full_base_telephony.mk)
 $(call inherit-product, device/samsung/s3ve3g/device.mk)
 
 # Device identifier. This must come after all inclusions.
-PRODUCT_NAME := aosp_s3ve3g
+PRODUCT_NAME := lineage_s3ve3g
 PRODUCT_DEVICE := s3ve3g
 PRODUCT_BRAND := Samsung
 PRODUCT_MODEL := GT-I9301I
 PRODUCT_MANUFACTURER := Samsung
 
-# JDC Build Type
-JDC_BUILD_TYPE := ALPHA
-
-DEVICE_MAINTAINERS := M.H.K.JAHROMI, DarkJoker360, PhilSmith31, PythonLimited , Nikan Dalvand 
-
-WITH_ROOT := true
+DEVICE_MAINTAINERS := M.H.K.JAHROMI
